@@ -1,0 +1,38 @@
+html, body{
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+#linea{
+    text-align: left;
+    background-color: #f8f8f8;
+    color: royalblue;
+    padding: 8px 0px;
+	width:100%;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+
+}
+
+.logo{
+    width: 32px;
+    height: 32px;
+}
+
+.btn-linea{
+    padding: 21px 0px 21px 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+
+}
+/*quitarle el padding por defecto a la casilla de correo*/
+.sinpadding [class*="col-"] {
+    padding: 0;
+}
+table, th, td{
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,21 @@
+{% extends 'webapp/base_inicio.html' %}
+
+{% block registro %}
+<form>
+    <div style="margin-top: 5%;" class='col-xs-12 col-md-12 col-sd-12'>
+        <label class='col-xs-12 col-md-5 col-sd-12 label'>NIT:</label>
+        <input type='text' class='col-xs-12 col-md-5 col-sd-12' id="nit"><br/>
+        <label class="col-xs-12 col-md-5 col-sd-12 label">EMPRESA:</label>
+        <input type="text" required="Ingrese el nombre de la empresa" class="col-xs-12 col-md-6 col-sd-12"/><br />
+        <label class="col-xs-12 col-md-5 col-sd-12">CORREO:</label>
+        <input type="text" class="col-xs-12 col-md-6 col-sd-12" required="Ingrese el correo"/><br />
+        <label type="text" class="col-xs-12 col-md-5 col-sd-12">USUARIO:</label>
+        <input type="text" class="col-xs-12 col-md-6 col-sd-12" required="Campo Obligatorio"/><br/>
+        <label class="col-xs-12 col-md-5 col-sd-12 label">CONTRASEÑA:</label>
+        <input type="text" class="col-xs-12 col-md-6 col-sd-12" required="Digite una contraseña"/><br>
+        <label class="col-xs-12 col-md-5 col-sd-12 label">REPITA LA CONTRASEÑA:</label>
+        <input type="text" class="col-xs-12 col-md-6 col-sd-12" required="Repita la contraseña"><br><br>
+    </div>
+    <input type ="submit" class="btn btn-primary" value="registrar"/>
+</form>
+{% endblock %}

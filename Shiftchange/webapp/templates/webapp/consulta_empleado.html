@@ -1,0 +1,19 @@
+{% extends 'webapp/base_inicio.html' %}
+require(["consulta.js"], function(valor) {
+  // ...
+});
+
+{% block empleado %}
+
+<form action="../empleados/" method="" id="consulta" name="" onsubmit="return validation()">
+
+    <div>
+
+        <label>cedula</label>
+        <input type ="text"/ ><br>
+        <input type="submit" id="document"/>
+
+    </div>
+</form>
+
+{% endblock %}

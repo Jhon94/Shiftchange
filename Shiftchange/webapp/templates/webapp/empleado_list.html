@@ -1,0 +1,28 @@
+{% extends 'webapp/base_inicio.html' %}
+
+{% block consultaempleado %}
+
+<button id="btnExport" class="btn" style="margin:5% 10% 0% 85% ;border: 1px solid #ccc; ">Exportar a excel</button><br><br>
+<div id="table_empleado_list">
+<table id="table_wrapper"  style="margin: 0px 5% 0% -5%;" class="table table-bordered table-hover">
+    <tr class="header" style="background-color: #f1f1f1;">
+        <th>Documento</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Hora inicio</th>
+        <th>Hora fin</th>
+    </tr>
+    {% for empleado in object_list %}
+    <tr>
+        <td>{{empleado.documento}}</td>
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.apellido}}</td>
+        <td>{{empleado.correo}}</td>
+        <td>{{empleado.apellido}}</td>
+        <td>{{empleado.apellido}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

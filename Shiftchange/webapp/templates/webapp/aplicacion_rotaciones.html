@@ -1,0 +1,91 @@
+{% extends 'webapp/base_aplicativo.html' %}
+
+{% block aplicacion_rotaciones %}
+
+<div style="margin:10% 0% 1% 5%; text-align: left;">
+<form>
+    <label>Dia inicio:</label>
+    <input type="date" required>
+    <label style="margin-left: 1%">Dia fin:</label>
+    <input type="date" required>
+    <input type="submit" class="btn btn-primary" style="padding: 5px 5px" value="Rotar">
+</form>
+</div>
+
+<div id="table_empleado_list" style="margin: 0% 5% 0% 5%; width:90%;text-align: center;">
+    <table id="" class="table table-bordered table-hover">
+        <tr class="header" style="background-color: #f1f1f1;">
+            <th>#</th>
+            <th>Funcion</th>
+            <th>Maquina</th>
+            <th>Empleado</th>
+            <th>Turno</th>
+            <th>Dia inicio</th>
+            <th>Dia fin</th>
+        </tr>
+
+        <tr>
+            <td style="width: 76px;">
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="ID">
+                    </div>
+                  </form>
+            </td >
+            <td>
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                 </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+        </tr>
+        {% for turnosgenerado in object_list %}
+        <tr>
+            <td>{{turnosgenerado.id}}</td>
+            <td>{{turnosgenerado.funcion}}</td>
+            <td>{{turnosgenerado.maquina}}</td>
+            <td>{{turnosgenerado.empleado}}</td>
+            <td>{{turnosgenerado.turno}}</td>
+            <td>{{turnosgenerado.dia_inicio}}</td>
+            <td>{{turnosgenerado.dia_fin}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

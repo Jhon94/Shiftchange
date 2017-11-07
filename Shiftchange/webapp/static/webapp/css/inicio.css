@@ -1,0 +1,163 @@
+html, body{
+    text-align: center;
+    font-family:sans-serif;
+	width:100%;
+    position: absolute;
+}
+
+.Linea-negra{
+    background-color: #f8f8f8;
+    color: royalblue;
+    padding: 8px 0px;
+    font-size: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.Logo{
+    width: 50px;
+    height: 50px;
+}
+#table_wrapper{
+    text-align: center;
+    width: 100%;
+
+}
+
+table, th, td{
+    border: 1px solid #ccc;
+}
+
+th{
+    background-color: #ddd;
+}
+
+.img1{
+   float:right;
+   padding:0px;
+   margin: 0px 0px 0px -2%;
+   background-size: cover;
+   background-position: center;
+   min-height: 100%;
+   max-height: 100%;
+   right: 100px;
+
+}
+.img2{
+   padding:0px;
+   margin:0px 0px;
+   float:right;
+   background-size: cover;
+   background-position: center;
+   min-height: 100%;
+    max-height: 100%;
+}
+.fade{
+        opacity:0.5;
+		padding:0px;
+
+}
+.fade:hover{
+        opacity:1;
+		padding:0px;
+}
+
+/*ARROW DISPLAY*/
+.container {
+  display: flex;
+}
+.container-1,
+.container-2 {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+}
+.container-1 {
+  background: #ccc;
+
+}
+.container-2 {
+  background: #333;
+
+}
+
+/* STYLES FROM BOTH */
+
+.btn-empleados,
+.btn-empresa {
+    top: 30vh;
+    opacity: 0;
+    position: absolute;
+    padding: 16px 150px;
+}
+
+/* BUTTON FROM EMPLEADOS */
+.btn-empleados {
+  left: -100px;
+  background: #627ecf;
+  color: #fff;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+  font-size: 20px;
+}
+.caja-1:hover > .btn-empleados {
+  left: 0;
+  opacity: 1;
+}
+
+.alto{
+height: 89vh;
+padding: 0px;
+}
+
+/* BUTTON FROM EMPRESA */
+
+.btn-empresa {
+
+  background: #627ecf;
+  color: #ccc;
+  -webkit-transition: right .5s;
+  transition: right .5s;
+  font-size: 20px;
+  visibility: hidden;
+  display: none;
+  visibility: hidden;
+}
+.caja-2:hover > .btn-empresa {
+  right: 0;
+  opacity: 1;
+  visibility:visible;
+  display: inline-block;
+}
+
+/* ARROW FROM BOTH */
+.btn-empleados::before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #627ecf;
+}
+.btn-empresa::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right:30px solid #627ecf;
+}
+.caja-1 {
+    position: relative;
+    margin:0px ;
+}
+
+.caja-2 {
+    position: relative;
+    margin:0px;
+}

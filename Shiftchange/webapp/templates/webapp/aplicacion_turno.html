@@ -1,0 +1,180 @@
+{% extends 'webapp/base_aplicativo.html' %}
+
+{% block aplicacion_turno %}
+
+<div style="text-align: right; margin: 7% 10% 1% 0px">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Añadir
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Añadir turno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+            <form>
+                <div class="col-xs-12 col-md-12 col-sm-12 container " style="text-align:center;">
+                    <div clas="col-xs-4 col-md-4 col-sm-4" style="float:left; text-align:left;">
+                        <label>Jornada</label><br>
+                        <label>Hora inicio</label><br>
+                        <label>Hora fin</label><br>
+                        <label>Dia inicio</label><br>
+                        <label>Dia fin</label><br>
+                        <label>Activo</label>
+
+                    </div>
+                    <div class="col-xs-8 col-md-8 col-sm-8" style="float:left; text-align:left;">
+
+                        <input type="text" style="margin:1px 0px;" required><br>
+                        <input type="time" style="margin:1px 0px;" required><br>
+                        <input type="time" style="margin:1px 0px;" required><br>
+                        <input type="date" style="margin:1px 0px;" required><br>
+                        <input type="date" style="margin:1px 0px;" required><br>
+                        <input type="checkbox" style="margin:1px 0px;" checked><br>
+                    </div>
+
+                <div class="modal-footer col-xs-12 col-md-12 col-sm-12">
+                  <input type="submit" class="btn btn-secondary" data-dismiss="modal" Value="Cerrar">
+                  <input type="submit" class="btn btn-primary" value="Guardar">
+                </div>
+            </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal modificar-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Modificar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modificar turno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <form>
+              <div class="col-xs-12 col-md-12 col-sm-12 container " style="text-align:center;">
+                  <div clas="col-xs-4 col-md-4 col-sm-4" style="float:left; text-align:left;">
+                      <label>Jornada</label><br>
+                      <label>Hora inicio</label><br>
+                      <label>Hora fin</label><br>
+                      <label>Dia inicio</label><br>
+                      <label>Hora fin</label><br>
+                      <label>Activo</label><br>
+                  </div>
+                  <div class="col-xs-8 col-md-8 col-sm-8" style="float:left; text-align:left;">
+
+                      <input type="text" style="margin:1px 0px;" required><br>
+                      <input type="time" style="margin:1px 0px;" required><br>
+                      <input type="time" style="margin:1px 0px;" required><br>
+                      <input type="date" style="margin:1px 0px;" required><br>
+                      <input type="date" style="margin:1px 0px;" required><br>
+                      <input type="checkbox" style="margin:1px 0px;" checked><br>
+                  </div>
+
+              <div class="modal-footer col-xs-12 col-md-12 col-sm-12">
+                <input type="submit" class="btn btn-secondary" data-dismiss="modal" value="Cerrar">
+                <input type="submit" class="btn btn-primary" value="Modificar">
+              </div>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{# Fin modal#}
+
+<div id="table_empleado_list" style="margin: 0% 10% 0% 10%; width:80%;text-align: center;">
+    <table id="" class="table table-bordered table-hover">
+        <tr class="header" style="background-color: #f1f1f1;">
+            <th>#</th>
+            <th>Jornada</th>
+            <th>Hora inicio</th>
+            <th>Hora fin</th>
+            <th>dia inicio</th>
+            <th>dia fin</th>
+            <th>Activo</th>
+        </tr>
+
+        <tr>
+            <td style="width: 76px;">
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="ID">
+                    </div>
+                  </form>
+            </td >
+            <td>
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                 </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </td>
+        </tr>
+        {% for turno in object_list %}
+        <tr>
+            <td>{{turno.id}}</td>
+            <td>{{turno.jornada}}</td>
+            <td>{{turno.hora_inicio}}</td>
+            <td>{{turno.hora_fin}}</td>
+            <td>{{turno.dia_inicio}}</td>
+            <td>{{turno.dia_fin}}</td>
+            <td>{{turno.activo}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

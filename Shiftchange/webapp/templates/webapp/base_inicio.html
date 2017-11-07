@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" />
+
+    <title>Inicio</title>
+    <link rel="Stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/html" href="{% static 'webapp/js/export.js' %}" />
+    <link rel="stylesheet" type="text/html" href="{% static 'webapp/js/consulta.js' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'webapp/css/inicio.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'webapp/css/login.css' %}" />
+</head>
+<body>
+    <div class="Linea-negra col-xs-12 col-sm-12 col-md-12">
+        <a href="../inicio">
+            <span><img src="{% static 'webapp/images/logo.png' %}" class="logo" />SHIFTCHANGE</span>
+        </a>
+    </div>
+    <h1 id=""></h1>
+
+    {% block inicio %}
+    {% endblock %}
+
+    {% block empleado %}
+    {% endblock %}
+
+    {% block consultaempleado %}
+    {% endblock %}
+
+    {% block loginempresa %}
+    {% endblock %}
+
+    {% block registro %}
+    {% endblock %}
+
+    {% block clave %}
+    {% endblock %}
+
+<script type="text/javascript" src="{% static 'webapp/js/crud.js' %}" ></script>
+<script  src="{% static 'webapp/js/export.js' %}"></script>
+</body>
+</html>

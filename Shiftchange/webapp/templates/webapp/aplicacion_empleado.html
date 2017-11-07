@@ -1,0 +1,174 @@
+{% extends 'webapp/base_aplicativo.html' %}
+
+{% block aplicacion_empleado %}
+
+<div style="text-align: right; margin: 7% 5% 1% 0px">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Añadir
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Añadir empleado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+            <form >
+                <div class="col-xs-12 col-md-12 col-sm-12 container " style="text-align:center;">
+                    <div clas="col-xs-4 col-md-4 col-sm-4" style="float:left; text-align:left;">
+                        <label>Documento:</label><br>
+                        <label>Nombre:</label><br>
+                        <label>Apellidos:</label><br>
+                        <label>Correo:</label><br>
+                        <label>Activo:</label><br>
+                    </div>
+                    <div class="col-xs-8 col-md-8 col-sm-8" style="float:left; text-align:left;">
+
+                        <input type="text" name="documento" required><br>
+                        <input type="text" style="margin:1px 0px;" name="nombre" required><br>
+                        <input type="text" style="margin:1px 0px;" name="apellido" required><br>
+                        <div class="container sinpadding">
+                            <div class="row">
+                                <input type="text" style="margin:1px 0px;" class="col-xs-12 col-md-12 col-sm-12" name="correo"><br>
+                            </div>
+                        </div>
+                        <input type="checkbox" style="margin:1px 0px;" name="activo" checked><br>
+                    </div>
+
+                <div class="modal-footer col-xs-12 col-md-12 col-sm-12">
+                  <input type="submit" class="btn btn-secondary" data-dismiss="modal" Value="Cerrar">
+                  <input type="submit" class="btn btn-primary" value="Guardar" onclick="agregarEmpleado()">
+                </div>
+            </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal modificar-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Modificar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Añadir empleado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <form>
+              <div class="col-xs-12 col-md-12 col-sm-12 container " style="text-align:center;">
+                  <div clas="col-xs-4 col-md-4 col-sm-4" style="float:left; text-align:left;">
+                      <label>Documento:</label><br>
+                      <label>Nombre:</label><br>
+                      <label>Apellidos:</label><br>
+                      <label>Correo:</label><br>
+                      <label>Activo:</label><br>
+                  </div>
+                  <div class="col-xs-8 col-md-8 col-sm-8" style="float:left; text-align:left;"><input type="text" required><br>
+
+                      <input type="text" style="margin:1px 0px;" required><br>
+                      <input type="text" style="margin:1px 0px;" required><br>
+                      <div class="container sinpadding">
+                          <div class="row">
+                              <input type="text" style="margin:1px 0px;" class="col-xs-12 col-md-12 col-sm-12" ><br>
+                          </div>
+                      </div>
+                      <input type="checkbox" style="margin:1px 0px;" checked><br>
+                  </div>
+
+              <div class="modal-footer col-xs-12 col-md-12 col-sm-12">
+                <input type="submit" class="btn btn-secondary" data-dismiss="modal" value="Cerrar">
+                <input type="submit" class="btn btn-primary" value="Modificar">
+              </div>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{# Fin modal#}
+
+<div id="table_empleado_list" style="margin: 0% 5% 0% 5%; width:90%;">
+    <table id="" class="table table-bordered table-hover">
+        <tr class="header" style="background-color: #f1f1f1;">
+            <th>#</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Activo</th>
+            <th>Estado</th>
+        </tr>
+
+        <tr>
+            <td style="width: 6%;">
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="ID">
+                    </div>
+                  </form>
+            </td>
+            <td><form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                  </form>
+            </td>
+            <td><form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                 </form>
+            </td>
+            <td><form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                 </form>
+            </td>
+            <td><form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                  </form>
+            </td>
+            <td><form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                  </form>
+            </td>
+        </tr>
+        {% for empleado in empleados %}
+        <tr>
+            <td>{{empleado.id}}</td>
+            <td>{{empleado.documento}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.correo}}</td>
+            <td>{{empleado.activo}}</td>
+            <td>{% if empleado.activo %}
+            <input onclick="cambioEstado('{% url 'cambioEstado' estado=0 emplea=empleado.id%}')" type="checkbox" name="activo" checked></input>
+            {% else %}
+            <input onclick="cambioEstado('{% url 'cambioEstado' estado=1 emplea=empleado.id%}')" type="checkbox"></input>
+            {% endif %}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}
